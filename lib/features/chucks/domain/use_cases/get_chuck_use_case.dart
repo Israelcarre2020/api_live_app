@@ -12,5 +12,3 @@ class GetChuckUseCase implements UseCase<Future<ChuckModel>, void> {
     return repository.getChuck();
   }
 }
-
-//TODO: CATCH THE ERRORS ON CUBIT
