@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../data/models/chuck_model.dart';
 
-class ChuckCard extends StatelessWidget {
+class Body extends StatelessWidget {
   final List<ChuckModel> chucks;
   final Function() onPress;
 
-  const ChuckCard(this.chucks, this.onPress);
+  const Body(this.chucks, this.onPress);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class ChuckCard extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.all(10),
           child: Text(
-            'Chucks List:',
+            'Chuck Norris Jokes:',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ),

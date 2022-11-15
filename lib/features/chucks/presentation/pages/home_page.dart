@@ -5,7 +5,7 @@ import '../../../../core/di_manager/di_manager.dart';
 
 import '../../domain/use_cases/get_chuck_use_case.dart';
 import '../manager/chuck_cubit.dart';
-import '../widgets/chuck_card.dart';
+import '../widgets/body.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -61,7 +61,7 @@ class _UsersListPageViewState extends State<UsersListPageView> {
         }, builder: (_, state) {
           return state.maybeWhen(
               loadedChucks: (chucks) =>
-                  ChuckCard(chucks, () => _loadChucks(chucksAmount)),
+                  Body(chucks, () => _loadChucks(chucksAmount)),
               loading: () {
                 return const Center(
                   child: CircularProgressIndicator(),
@@ -71,7 +71,7 @@ class _UsersListPageViewState extends State<UsersListPageView> {
                 return Center(
                   child: TextButton(
                       onPressed: () => _loadChucks(chucksAmount),
-                      child: const Text('Load chucks')),
+                      child: const Text('Load jokes')),
                 );
               });
         }));
